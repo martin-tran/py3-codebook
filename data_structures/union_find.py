@@ -11,6 +11,9 @@ class UnionFind(object):
         union_find = UnionFind(len(mapping))
 
     and so on.
+
+    Attributes:
+        num_disjoint: Stores the current number of disjoint sets.
     """
     
     def __init__(self, size: int):
@@ -18,6 +21,7 @@ class UnionFind(object):
         self._parents = list(range(size))
         self._ranks = [0 for _ in range(size)]
         self._sizes = [1 for _ in range(size)]
+        self.num_disjoint = size
 
     def find(self, i: int) -> int:
         """Finds the representative of set |i|."""
@@ -40,6 +44,7 @@ class UnionFind(object):
 
         self._sizes[x] += self._sizes[y]
         self._sizes[y] = self._sizes[x]
+        self.num_disjoint -= 1
 
     def same_set(self, i: int, j: int) -> bool:
         """Checks whether or not the sets |i| and |j| are disjoint or not."""
