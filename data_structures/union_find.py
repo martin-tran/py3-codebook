@@ -6,7 +6,7 @@ class UnionFind(object):
 
     Sets are represented as ints, so it is up to the user to map whatever type
     they are using (e.g. strings) to ints to use this. This is easily done with:
-    
+
         mapping = {my_thing: i for (i, my_thing) in enumerate(my_iterable)}
         union_find = UnionFind(len(mapping))
 
@@ -15,7 +15,7 @@ class UnionFind(object):
     Attributes:
         num_disjoint: Stores the current number of disjoint sets.
     """
-    
+
     def __init__(self, size: int):
         """Inits the Union Find data structure containing |size| members."""
         self._parents = list(range(size))
