@@ -7,7 +7,7 @@ class SegmentTree(object):
     """Implementation of a 1-D segment tree for arbitrary binary operations.
     
     This currently only supports things of type T where T and the binary
-    operation form a monad. The identity element defaults to 0 for basic
+    operation form a semigroup. The identity element defaults to 0 for basic
     use in range sum queries so this can be easily used when T is any basic
     number type, i.e., ints and floats.
 
