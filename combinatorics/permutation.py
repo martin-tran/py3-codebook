@@ -8,7 +8,7 @@ def lexicographic_permutations(
 
     Generates all permutaitons of |a| in lexicographic order. All variable
     names are stolen straight from the text. This also takes into account
-    repeated elements.
+    repeated elements so that only the unique permutations are returned.
 
     Args:
       a: A sorted sequence of T's from which to generate permutations.
